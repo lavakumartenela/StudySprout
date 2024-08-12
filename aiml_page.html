@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI and Machine Learning Branch - College of Engineering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1px;
+        }
+        #header button{
+            position:absolute;
+            left:4%;
+            background-color: #003366;
+            border:none;
+        }
+        #main-content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+	
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Sidebar initially hidden */
+            width: 250px;
+            height: 100%;
+            background-color: #003366;
+            color: white;
+            transition: left 0.3s ease;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        #sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #sidebar a:hover {
+            background-color: #005c99;
+        }
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        #sidebar .close-btn:hover {
+            color: #ccc;
+        }
+
+        #sidebar .sidebar-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #002b4d;
+        }
+
+        #sidebar .sidebar-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 200px;
+            }
+
+            #sidebar .sidebar-header h2 {
+                font-size: 20px;
+            }
+
+            #main-content {
+                margin-left: 200px; /* Adjust main content margin */
+            }
+        }
+
+        /* Additional Styling for Homepage */
+        #home-banner {
+            
+            height: 300px;
+            position: relative;
+        }
+
+        #home-banner h1 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        #home-banner img{
+	    position:absolute;
+	    left:33%;
+	    top:10%;
+	    width:500px;
+	    height:auto;
+	}
+        #home-info {
+            margin-top: 20px;
+            padding: 20px;
+            
+            border-radius: 5px;
+            text-align: center;
+            background-color: #ddd;
+        }
+    
+        #home-info h2 {
+            color: #333;
+            font-size: 28px;
+            z-index:1;
+        }
+
+        #home-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            z-index:1;
+        }
+
+        /* Additional Styling for General Layout */
+        #footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Timetable and Subjects Styling */
+        #timetable,
+        #subjects {
+            display: none;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #003366;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #home-banner h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <h2>AIML Branch</h2>
+            <span class="close-btn" id="closeSidebarBtn">&times;</span>
+        </div>
+        <a href="#" class="year-link" data-year="1">1st Year</a>
+        <a href="#" class="year-link" data-year="2">2nd Year</a>
+        <a href="#" class="year-link" data-year="3">3rd Year</a>
+        <a href="#" class="year-link" data-year="4">4th Year</a>
+        <a href="login.html" class="exit-btn">Exit</a>
+    </div>
+
+    <div id="main-content">
+        <div id="header">
+	    <button id="openSidebarBtn"><strong style= "font-size:80px">&#9776;</strong> </button>
+            <h1 style="text-align:center">Artificial Intelligence and Machine Learning Branch</h1>
+	        <h5>Sagi Rama Krishnam Raju Engineering College<h5>
+	    
+        </div>
+	
+
+        
+
+        <div id="home-banner">
+            <h1>Explore the Future of Artificial Intelligence and Machine Learning</h1>
+	        <img src="https://wallpapertag.com/wallpaper/full/f/c/a/751445-artificial-intelligence-wallpapers-1920x1080-photo.jpg"></img>
+        </div>
+
+        <div id="home-info">
+            <h2>Welcome to the Artificial Intelligence and Machine Learning Branch</h2>
+            <p >At our AIML branch, we are committed to fostering innovation in artificial intelligence and machine learning technologies. Our programs prepare students to tackle real-world challenges across various sectors, from healthcare to finance and beyond.</p>
+            <p>Discover cutting-edge research opportunities, hands-on learning experiences, and a supportive community dedicated to pushing the boundaries of AI.</p>
+            <p>
+                Artificial Intelligence and Machine Learning applications are becoming intrinsic to our daily lives. AI and ML are being used in almost all the fields from health care, agriculture, education, business, autonomous vehicles, social media, tourism, finance, gaming, surveillance, entertainment, e-commerce, space exploration, and robotics to defense. Artificial Intelligence and Machine Learning allow for the development of applications that help improve the various services, and products we use daily and build applications and products that were previously perceived as impossible like various computer vision applications, self-driving vehicles, generating new music, videos, and text.
+            </p>
+            <p>
+                B.Tech. in Artificial Intelligence and Machine Learning started at SRKREC in the academic year 2021-2022 with an intake of 60 seats. This B.Tech. program aims to produce graduates who have good theoretical and practical knowledge in core concepts of Computer Science and in emerging areas like artificial intelligence, machine learning, deep learning, reinforcement learning, web application development, mobile application development, IOT, Cloud Computing, MLOPs etc. It also strives to impart good programming, software development, communication, sustainability, teamwork skills and professional ethics to undergraduates. Using these skills the graduates will be able to articulate, implement interdisciplinary projects, and conduct research in related fields.
+            </p>
+            <p>
+                The department has signed MOU with the industry partners like Blackbucks with the aim of upskilling the faculty and students. A faculty development program has been going on since January, 2022 where highly experienced instructors from industry are training the faculty on emerging areas of AI and ML. The MOU also provides the necessary advanced infrastructure in the cloud to faculty and students.
+            </p>
+            <p>
+                Career Opportunities<br>
+                The possible list of job roles for Artificial Intelligence and Machine Learning engineers are given below:<br>
+                a. Machine Learning Engineer<br>
+                b. Data Scientist<br>
+                c. Game Developer<br>
+                d. Data Engineer<br>
+                e. Business Intelligence Developer<br>
+                f. Robotics Scientist<br>
+                g. AI Engineer<br>
+                h. Research Scientist...
+            </p>
+            <p>
+                <a href="https://srkrec.edu.in/aiml.php">know more</a>
+            </p>
+        </div>
+
+        <div id="footer">
+            <p>&copy; 2024 Artificial Intelligence and Machine Learning Branch, sagi rama krishnam raju engineering college</p>
+        </div>
+
+        <div id="timetable">
+            <h2>Timetable</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Day</th>
+                        <th>09:00-10:30</th>
+                        <th>10:30-12:00</th>
+                        <th>Lunch</th>
+                        <th>13:30-15:00</th>
+                        <th>15:00-16:00</th>
+                    </tr>
+                </thead>
+                <tbody id="timetableBody">
+                    <!-- Timetable rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="subjects">
+            <h2>Courses</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>course</th>
+                        <th>Professor</th>
+                        <th>Books</th>
+                    </tr>
+                </thead>
+                <tbody id="subjectsTableBody">
+                    <!-- Subjects rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openSidebarBtn = document.getElementById('openSidebarBtn');
+            const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+            const sidebar = document.getElementById('sidebar');
+            const yearLinks = document.querySelectorAll('.year-link');
+
+            // Open sidebar
+            openSidebarBtn.addEventListener('click', function() {
+                sidebar.style.left = '0';
+            });
+
+            // Close sidebar
+            closeSidebarBtn.addEventListener('click', function() {
+                sidebar.style.left = '-250px';
+            });
+
+            // Event listeners for year links
+            yearLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let year = parseInt(this.getAttribute('data-year'));
+                    console.log('Clicked year:', year); // Debugging
+                    populateTimetable(year);
+                    populateSubjects(year);
+                    closeSidebar();
+                });
+            });
+        });
+
+        // Sample timetable data (modified for variation)
+        const timetableData = {
+            1: [
+                { day: 'MON', '09:00-10:30': 'Introduction to AI', '10:30-12:00': 'Ethics in AI', 'Lunch': '', '13:30-15:00': 'AI in Finance', '15:00-16:00': '' },
+                { day: 'TUE', '09:00-10:30': 'AI Ethics', '10:30-12:00': 'AI in Agriculture', 'Lunch': '', '13:30-15:00': 'AI in Retail', '15:00-16:00': '' },
+                { day: 'WED', '09:00-10:30': 'Ethics in AI', '10:30-12:00': 'Introduction to AI', 'Lunch': '', '13:30-15:00': 'AI in Healthcare', '15:00-16:00': '' },
+                { day: 'THU', '09:00-10:30': 'AI in Finance', '10:30-12:00': 'AI in Agriculture', 'Lunch': '', '13:30-15:00': 'AI in Retail', '15:00-16:00': '' },
+                { day: 'FRI', '09:00-10:30': 'AI in Retail', '10:30-12:00': 'AI in Finance', 'Lunch': '', '13:30-15:00': 'Introduction to AI', '15:00-16:00': '' },
+                { day: 'SAT', '09:00-10:30': 'Introduction to AI', '10:30-12:00': 'Ethics in AI', 'Lunch': '', '13:30-15:00': 'AI in Finance', '15:00-16:00': '' }
+            ],
+            2: [
+                { day: 'MON', '09:00-10:30': 'Advanced Machine Learning', '10:30-12:00': 'Deep Learning', 'Lunch': '', '13:30-15:00': 'AI in Healthcare', '15:00-16:00': '' },
+                { day: 'TUE', '09:00-10:30': 'Deep Learning', '10:30-12:00': 'Advanced Machine Learning', 'Lunch': '', '13:30-15:00': 'AI in Education', '15:00-16:00': '' },
+                { day: 'WED', '09:00-10:30': 'AI in Finance', '10:30-12:00': 'AI in Agriculture', 'Lunch': '', '13:30-15:00': 'AI in Retail', '15:00-16:00': '' },
+                { day: 'THU', '09:00-10:30': 'AI in Retail', '10:30-12:00': 'AI in Finance', 'Lunch': '', '13:30-15:00': 'Advanced Machine Learning', '15:00-16:00': '' },
+                { day: 'FRI', '09:00-10:30': 'Introduction to AI', '10:30-12:00': 'Ethics in AI', 'Lunch': '', '13:30-15:00': 'AI in Finance', '15:00-16:00': '' },
+                { day: 'SAT', '09:00-10:30': 'Advanced Machine Learning', '10:30-12:00': 'Deep Learning', 'Lunch': '', '13:30-15:00': 'AI in Healthcare', '15:00-16:00': '' }
+            ],
+            3: [
+                { day: 'MON', '09:00-10:30': 'AI in Retail', '10:30-12:00': 'AI in Finance', 'Lunch': '', '13:30-15:00': 'Advanced Machine Learning', '15:00-16:00': '' },
+                { day: 'TUE', '09:00-10:30': 'Introduction to AI', '10:30-12:00': 'Ethics in AI', 'Lunch': '', '13:30-15:00': 'AI in Finance', '15:00-16:00': '' },
+                { day: 'WED', '09:00-10:30': 'AI in Healthcare', '10:30-12:00': 'AI in Education', 'Lunch': '', '13:30-15:00': 'Advanced Machine Learning', '15:00-16:00': '' },
+                { day: 'THU', '09:00-10:30': 'AI in Agriculture', '10:30-12:00': 'AI in Retail', 'Lunch': '', '13:30-15:00': 'Introduction to AI', '15:00-16:00': '' },
+                { day: 'FRI', '09:00-10:30': 'Introduction to AI', '10:30-12:00': 'Ethics in AI', 'Lunch': '', '13:30-15:00': 'AI in Finance', '15:00-16:00': '' },
+                { day: 'SAT', '09:00-10:30': 'Advanced Machine Learning', '10:30-12:00': 'Deep Learning', 'Lunch': '', '13:30-15:00': 'AI in Healthcare', '15:00-16:00': '' }
+            ],
+            4: [
+                { day: 'MON', '09:00-10:30': 'AI in Healthcare', '10:30-12:00': 'AI in Education', 'Lunch': '', '13:30-15:00': 'Advanced Machine Learning', '15:00-16:00': '' },
+                { day: 'TUE', '09:00-10:30': 'Introduction to AI', '10:30-12:00': 'Ethics in AI', 'Lunch': '', '13:30-15:00': 'AI in Finance', '15:00-16:00': '' },
+                { day: 'WED', '09:00-10:30': 'AI in Agriculture', '10:30-12:00': 'AI in Retail', 'Lunch': '', '13:30-15:00': 'Introduction to AI', '15:00-16:00': '' },
+                { day: 'THU', '09:00-10:30': 'Advanced Machine Learning', '10:30-12:00': 'Deep Learning', 'Lunch': '', '13:30-15:00': 'AI in Healthcare', '15:00-16:00': '' },
+                { day: 'FRI', '09:00-10:30': 'AI in Retail', '10:30-12:00': 'AI in Finance', 'Lunch': '', '13:30-15:00': 'Advanced Machine Learning', '15:00-16:00': '' },
+                { day: 'SAT', '09:00-10:30': 'Introduction to AI', '10:30-12:00': 'Ethics in AI', 'Lunch': '', '13:30-15:00': 'AI in Finance', '15:00-16:00': '' }
+            ]
+        };
+
+        // Sample subjects data (modified for variation)
+        const subjectsData = {
+            1: [
+                { subject: 'Introduction to AI', professor: 'Dr. John Smith', books: ['Introduction to AI by Author1', 'AI Algorithms by Author2'] },
+                { subject: 'AI Ethics', professor: 'Dr. Emily Brown', books: ['Ethical AI by Author3', 'AI and Society by Author4'] },
+                { subject: 'Ethics in AI', professor: 'Prof. Andrew Clark', books: ['AI and Ethics by Author5', 'Understanding AI by Author6'] },
+                { subject: 'AI in Finance', professor: 'Dr. Sarah Adams', books: ['AI in Finance by Author7', 'Financial AI Applications by Author8'] },
+                { subject: 'AI in Agriculture', professor: 'Prof. Michael Green', books: ['AI in Agriculture by Author9', 'Smart Farming with AI by Author10'] },
+                { subject: 'AI in Retail', professor: 'Dr. Emma White', books: ['Retail AI Innovations by Author11', 'AI in E-commerce by Author12'] },
+                { subject: 'AI in Healthcare', professor: 'Prof. Laura Taylor', books: ['Healthcare AI Trends by Author13', 'Medical AI Applications by Author14'] }
+            ],
+            2: [
+                { subject: 'Advanced Machine Learning', professor: 'Dr. Michael Johnson', books: ['Advanced ML Techniques by Author15', 'ML Algorithms Explained by Author16'] },
+                { subject: 'Deep Learning', professor: 'Prof. Julia Martinez', books: ['Deep Learning Basics by Author17', 'Neural Networks Illustrated by Author18'] },
+                { subject: 'AI in Education', professor: 'Dr. Eric Wilson', books: ['Educational AI Trends by Author19', 'AI in Learning Systems by Author20'] },
+                { subject: 'AI in Retail', professor: 'Dr. Emma White', books: ['Retail AI Innovations by Author11', 'AI in E-commerce by Author12'] },
+                { subject: 'AI in Healthcare', professor: 'Prof. Laura Taylor', books: ['Healthcare AI Trends by Author13', 'Medical AI Applications by Author14'] },
+                { subject: 'AI in Finance', professor: 'Dr. Sarah Adams', books: ['AI in Finance by Author7', 'Financial AI Applications by Author8'] }
+            ],
+            3: [
+                { subject: 'Introduction to AI', professor: 'Dr. John Smith', books: ['Introduction to AI by Author1', 'AI Algorithms by Author2'] },
+                { subject: 'AI Ethics', professor: 'Dr. Emily Brown', books: ['Ethical AI by Author3', 'AI and Society by Author4'] },
+                { subject: 'Ethics in AI', professor: 'Prof. Andrew Clark', books: ['AI and Ethics by Author5', 'Understanding AI by Author6'] },
+                { subject: 'AI in Finance', professor: 'Dr. Sarah Adams', books: ['AI in Finance by Author7', 'Financial AI Applications by Author8'] },
+                { subject: 'AI in Agriculture', professor: 'Prof. Michael Green', books: ['AI in Agriculture by Author9', 'Smart Farming with AI by Author10'] },
+                { subject: 'AI in Retail', professor: 'Dr. Emma White', books: ['Retail AI Innovations by Author11', 'AI in E-commerce by Author12'] },
+                { subject: 'AI in Healthcare', professor: 'Prof. Laura Taylor', books: ['Healthcare AI Trends by Author13', 'Medical AI Applications by Author14'] }
+            ],
+            4: [
+                { subject: 'Advanced Machine Learning', professor: 'Dr. Michael Johnson', books: ['Advanced ML Techniques by Author15', 'ML Algorithms Explained by Author16'] },
+                { subject: 'Deep Learning', professor: 'Prof. Julia Martinez', books: ['Deep Learning Basics by Author17', 'Neural Networks Illustrated by Author18'] },
+                { subject: 'AI in Education', professor: 'Dr. Eric Wilson', books: ['Educational AI Trends by Author19', 'AI in Learning Systems by Author20'] },
+                { subject: 'AI in Retail', professor: 'Dr. Emma White', books: ['Retail AI Innovations by Author11', 'AI in E-commerce by Author12'] },
+                { subject: 'AI in Healthcare', professor: 'Prof. Laura Taylor', books: ['Healthcare AI Trends by Author13', 'Medical AI Applications by Author14'] },
+                { subject: 'AI in Finance', professor: 'Dr. Sarah Adams', books: ['AI in Finance by Author7', 'Financial AI Applications by Author8'] }
+            ]
+        };
+
+        // Function to populate timetable based on year
+        function populateTimetable(year) {
+            const timetableBody = document.getElementById('timetableBody');
+            timetableBody.innerHTML = ''; // Clear existing rows
+
+            timetableData[year].forEach(entry => {
+                let row = `<tr><td>${entry.day}</td>`;
+                row += `<td>Monday</td>`;
+                row += `<td>${entry['09:00-10:30']}</td>`;
+                row += `<td>${entry['10:30-12:00']}</td>`;
+                row += `<td>${entry['Lunch']}</td>`;
+                row += `<td>${entry['13:30-15:00']}</td>`;
+                row += `<td>${entry['15:00-16:00']}</td></tr>`;
+                timetableBody.innerHTML += row;
+            });
+
+            // Display timetable section
+            document.getElementById('timetable').style.display = 'block';
+        }
+
+        // Function to populate subjects based on year
+        function populateSubjects(year) {
+            const subjectsTableBody = document.getElementById('subjectsTableBody');
+            subjectsTableBody.innerHTML = ''; // Clear existing rows
+
+            subjectsData[year].forEach(subject => {
+                let row = `<tr><td>${subject.subject}</td>`;
+                row += `<td>${subject.professor}</td>`;
+                row += `<td>`;
+                subject.books.forEach(book => {
+                    row += `<a href="${book.link}" target="_blank">${book}</a><br>`;
+                });
+                row += `</td></tr>`;
+                subjectsTableBody.innerHTML += row;
+            });
+
+            // Display subjects section
+            document.getElementById('subjects').style.display = 'block';
+        }
+
+        // Function to close sidebar
+        function closeSidebar() {
+            document.getElementById('sidebar').style.left = '-250px';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN PAGE</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(rgb(49, 101, 231), rgb(86, 248, 237));
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 12px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: #525252;
+        }
+        .wrapper {
+            background: black;
+            border: 5px solid #f1f1f1;
+            width: 700px;
+            height: 550px;
+            border-radius: 40px;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+        .box {
+            background: white;
+            width: 600px;
+            border-radius: 40px;
+            margin: 0 auto;
+            padding: 0 0 20px 0;
+        }
+        .title {
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            user-select: none;
+            border-radius: 40px 40px 0 0;
+            background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+        }
+        .title1 {
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 5px;
+            color: #fff;
+        }
+        .username, .password {
+            background: #ecf0f1;
+            border: #ccc 1px solid;
+            padding: 8px;
+            width: 500px;
+            font-size: 1em;
+            border-radius: 20px;
+            margin-top: 10px;
+            color: #AAAAAA;
+        }
+        .btn {
+            background: #2ecc71;
+            width: 300px;
+            padding: 8px;
+            color: white;
+            border-radius: 20px;
+            border: #27ae60 1px solid;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            font-size: 0.8em;
+        }
+        .btn:hover {
+            background: #2CC06B;
+        }
+        .code-img {
+            border-radius: 50%;
+            padding: 10px;
+            width: 200px;
+            height: 180px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title1">SRKREC, BHIMAVARAM</div><br><br>
+        <div class="box">
+            <div class="title">Login Form</div>
+            <img src="https://media4.giphy.com/media/40cxBsgqqwb65M5ivp/giphy.gif" class="code-img" alt="code"><br>
+            <form action="login.php" method="POST">
+                <input class="username" name="username" type="text" placeholder="Username" id="text1" required><br>
+                <input class="password" name="password" type="password" placeholder="Password" id="text2" required><br>
+                <input type="submit" value="Login" class="btn">
+            </form>
+        </div>
+        <h5 style="color: #ffffff;">Not a member? <a href="signup.html">Signup now</a></h5>
+    </div>
+</body>
+</html>

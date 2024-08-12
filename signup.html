@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <style>
+    html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      background: linear-gradient(to right, #8300cd, #b800c4);
+      margin: 0;
+      height: 100vh;
+      align-items: center;
+    }
+    form {
+      border: 5px solid #f1f1f1;
+      background-color: rgb(19, 1, 1);
+      margin: 60px;
+      border-radius: 40px;
+      padding: 20px;
+      width: 400px;
+    }
+    input[type=text], input[type=password], input[type=number], select {
+      width: calc(100% - 32px);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: rgb(0, 255, 60);
+      color: white;
+      font-size: 20px;
+      font-weight: 200;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 35px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    h1 {
+      color: #f1f1f1;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <form action="process_signup.php" method="POST">
+    <h1>Signup Form</h1>
+    <hr style="color:#8ebf42">
+    <div class="formcontainer">
+      <input type="text" placeholder="Enter Full Name" name="fullname" minlength="8" required>
+      <input type="text" placeholder="Enter Email" name="email" minlength="8" required>
+      <input type="number" placeholder="Enter Contact No" name="contact" min="1000000000" max="9999999999" required>
+      <input type="text" placeholder="Enter Username" name="username" minlength="8" required>
+      <input type="password" placeholder="Enter Password" name="password" minlength="8" required>
+      <input type="password" placeholder="Enter Password Again" name="confirm_password" minlength="8" required>
+      <select name="branch" required>
+        <option value="">Select Branch</option>
+        <option value="AIML">AIML</option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+      </select>
+      <button type="submit"><strong>Submit</strong></button>
+    </div>
+  </form>
+</body>
+</html>

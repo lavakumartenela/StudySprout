@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iNFORMATION tECHNOLOGY Branch - College of Engineering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1px;
+        }
+
+        #header button {
+            position: absolute;
+            left: 4%;
+            background-color: #003366;
+            border: none;
+        }
+
+        #main-content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Sidebar initially hidden */
+            width: 250px;
+            height: 100%;
+            background-color: #003366;
+            color: white;
+            transition: left 0.3s ease;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        #sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #sidebar a:hover {
+            background-color: #005c99;
+        }
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        #sidebar .close-btn:hover {
+            color: #ccc;
+        }
+
+        #sidebar .sidebar-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #002b4d;
+        }
+
+        #sidebar .sidebar-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 200px;
+            }
+
+            #sidebar .sidebar-header h2 {
+                font-size: 20px;
+            }
+
+            #main-content {
+                margin-left: 200px; /* Adjust main content margin */
+            }
+        }
+
+        /* Additional Styling for Homepage */
+        #home-banner {
+            height: 300px;
+            position: relative;
+        }
+
+        #home-banner h1 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #home-banner img {
+            position: absolute;
+            left: 33%;
+            top: 10%;
+            width: 450px;
+            height: auto;
+        }
+
+        #home-info {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #ddd;
+        }
+
+        #home-info h2 {
+            color: #333;
+            font-size: 28px;
+            z-index: 1;
+        }
+
+        #home-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            z-index: 1;
+        }
+
+        /* Additional Styling for General Layout */
+        #footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Timetable and Subjects Styling */
+        #timetable,
+        #subjects {
+            display: none;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #003366;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #home-banner h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <h2>IT Branch</h2>
+            <span class="close-btn" id="closeSidebarBtn">&times;</span>
+        </div>
+        <a href="#" class="year-link" data-year="1">1st Year</a>
+        <a href="#" class="year-link" data-year="2">2nd Year</a>
+        <a href="#" class="year-link" data-year="3">3rd Year</a>
+        <a href="#" class="year-link" data-year="4">4th Year</a>
+    </div>
+
+    <div id="main-content">
+        <div id="header">
+            <button id="openSidebarBtn"><strong style="font-size: 40px;">&#9776;</strong></button>
+            <h1 style="text-align: center;">Information Technology Branch</h1>
+            <h5 style="text-align: center;">Sagi Rama Krishnam Raju Engineering College</h5>
+        </div>
+
+        <div id="home-banner">
+            <h1>Explore the World of Information Technology</h1>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.YtNxz0W_fpLB1002_ZENTwHaEo&pid=Api&P=0&h=180" alt="AI Wallpaper">
+        </div>
+
+        <div id="home-info">
+            <h2>Welcome to the Information Technology Branch</h2>
+            <p>At our IT branch, we are committed to providing comprehensive education in information technology. Our programs prepare students to excel in various domains, from software development to network administration and beyond.</p>
+            <p>Discover opportunities for hands-on learning, innovative research, and community engagement, essential for navigating the dynamic field of IT.</p>
+            <p>Information Technology plays a crucial role in modern businesses and industries. IT professionals drive technological advancements, manage networks, ensure cybersecurity, and leverage data analytics to support organizational success.</p>
+            <p>B.Tech. in Information Technology at SRKREC offers a blend of theoretical knowledge and practical skills. Students gain expertise in software engineering, database management, network security, cloud computing, and more, preparing them for diverse career paths in IT.</p>
+            <p>The department collaborates with industry leaders to provide workshops, seminars, and internships, enhancing practical skills and industry readiness. Advanced computing resources and infrastructure support both learning and research activities.</p>
+            <p>
+                Career Opportunities:<br>
+                Graduates from the Information Technology branch can pursue roles such as:
+                <br>a. Software Developer<br>
+                b. Network Administrator<br>
+                c. Cybersecurity Specialist<br>
+                d. Data Analyst<br>
+                e. System Architect<br>
+                f. Web Developer<br>
+                g. IT Consultant<br>
+                h. Database Manager...
+            </p>
+            <p><a href="https://srkrec.edu.in/it.php">Know more</a></p>
+        </div>
+
+        <div id="footer">
+            <p>&copy; 2024 Information Technology Branch, Sagi Rama Krishnam Raju Engineering College</p>
+        </div>
+
+        <div id="timetable">
+            <h2>Timetable</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>09:00-10:30</th>
+                        <th>10:30-12:00</th>
+                        <th>13:30-15:00</th>
+                        <th>15:00-16:30</th>
+                    </tr>
+                </thead>
+                <tbody id="timetableBody">
+                    <!-- Timetable rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="subjects">
+            <h2>Courses</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Subject</th>
+                        <th>Professor</th>
+                        <th>Books</th>
+                    </tr>
+                </thead>
+                <tbody id="subjectsTableBody">
+                    <!-- Subjects rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearLinks = document.querySelectorAll('.year-link');
+
+            // Event listeners for year links
+            yearLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let year = parseInt(this.getAttribute('data-year'));
+                    console.log('Clicked year:', year); // Debugging
+                    populateTimetable(year);
+                    populateSubjects(year);
+                    closeSidebar();
+                });
+            });
+
+            // Function to populate timetable based on year
+            function populateTimetable(year) {
+                const timetableBody = document.getElementById('timetableBody');
+                timetableBody.innerHTML = ''; // Clear existing rows
+
+                // Sample timetable data for Computer Science
+                const timetableDataCSE = {
+                    1: [
+                        { day: 'Monday', '09:00-10:30': 'Introduction to Programming', '10:30-12:00': 'Data Structures', '13:30-15:00': 'Computer Networks', '15:00-16:30': 'Database Management Systems' },
+                        { day: 'Tuesday', '09:00-10:30': 'Algorithms', '10:30-12:00': 'Operating Systems', '13:30-15:00': 'Web Development', '15:00-16:30': 'Software Engineering' },
+                        { day: 'Wednesday', '09:00-10:30': 'Data Structures', '10:30-12:00': 'Database Management Systems', '13:30-15:00': 'Artificial Intelligence', '15:00-16:30': 'Computer Networks' },
+                        { day: 'Thursday', '09:00-10:30': 'Operating Systems', '10:30-12:00': 'Web Development', '13:30-15:00': 'Software Engineering', '15:00-16:30': 'Algorithms' },
+                        { day: 'Friday', '09:00-10:30': 'Database Management Systems', '10:30-12:00': 'Artificial Intelligence', '13:30-15:00': 'Computer Networks', '15:00-16:30': 'Introduction to Programming' },
+                        { day: 'Saturday', '09:00-10:30': 'Web Development', '10:30-12:00': 'Software Engineering', '13:30-15:00': 'Algorithms', '15:00-16:30': 'Operating Systems' },
+                    ],
+                    2: [
+                        { day: 'Monday', '09:00-10:30': 'Advanced Algorithms', '10:30-12:00': 'Machine Learning', '13:30-15:00': 'Cloud Computing', '15:00-16:30': 'Information Security' },
+                        { day: 'Tuesday', '09:00-10:30': 'Big Data Analytics', '10:30-12:00': 'Software Testing', '13:30-15:00': 'Internet of Things', '15:00-16:30': 'Natural Language Processing' },
+                        { day: 'Wednesday', '09:00-10:30': 'Machine Learning', '10:30-12:00': 'Information Security', '13:30-15:00': 'Advanced Algorithms', '15:00-16:30': 'Cloud Computing' },
+                        { day: 'Thursday', '09:00-10:30': 'Software Testing', '10:30-12:00': 'Internet of Things', '13:30-15:00': 'Natural Language Processing', '15:00-16:30': 'Big Data Analytics' },
+                        { day: 'Friday', '09:00-10:30': 'Information Security', '10:30-12:00': 'Advanced Algorithms', '13:30-15:00': 'Cloud Computing', '15:00-16:30': 'Machine Learning' },
+                        { day: 'Saturday', '09:00-10:30': 'Internet of Things', '10:30-12:00': 'Natural Language Processing', '13:30-15:00': 'Big Data Analytics', '15:00-16:30': 'Software Testing' },
+                    ],
+                    3: [
+                        { day: 'Monday', '09:00-10:30': 'Blockchain Technology', '10:30-12:00': 'DevOps', '13:30-15:00': 'Data Science', '15:00-16:30': 'Mobile App Development' },
+                        { day: 'Tuesday', '09:00-10:30': 'Cybersecurity', '10:30-12:00': 'Virtual Reality', '13:30-15:00': 'E-commerce', '15:00-16:30': 'Advanced Databases' },
+                        { day: 'Wednesday', '09:00-10:30': 'DevOps', '10:30-12:00': 'Data Science', '13:30-15:00': 'Mobile App Development', '15:00-16:30': 'Blockchain Technology' },
+                        { day: 'Thursday', '09:00-10:30': 'Virtual Reality', '10:30-12:00': 'E-commerce', '13:30-15:00': 'Advanced Databases', '15:00-16:30': 'Cybersecurity' },
+                        { day: 'Friday', '09:00-10:30': 'Data Science', '10:30-12:00': 'Mobile App Development', '13:30-15:00': 'Blockchain Technology', '15:00-16:30': 'DevOps' },
+                        { day: 'Saturday', '09:00-10:30': 'E-commerce', '10:30-12:00': 'Advanced Databases', '13:30-15:00': 'Cybersecurity', '15:00-16:30': 'Virtual Reality' },
+                    ],
+                    4: [
+                        { day: 'Monday', '09:00-10:30': 'Artificial Intelligence Applications', '10:30-12:00': 'Robotics', '13:30-15:00': 'IT Project Management', '15:00-16:30': 'Professional Ethics' },
+                        { day: 'Tuesday', '09:00-10:30': 'Digital Marketing', '10:30-12:00': 'Enterprise Systems', '13:30-15:00': 'Cloud Security', '15:00-16:30': 'Business Intelligence' },
+                        { day: 'Wednesday', '09:00-10:30': 'Robotics', '10:30-12:00': 'IT Project Management', '13:30-15:00': 'Professional Ethics', '15:00-16:30': 'Artificial Intelligence Applications' },
+                        { day: 'Thursday', '09:00-10:30': 'Enterprise Systems', '10:30-12:00': 'Cloud Security', '13:30-15:00': 'Business Intelligence', '15:00-16:30': 'Digital Marketing' },
+                        { day: 'Friday', '09:00-10:30': 'IT Project Management', '10:30-12:00': 'Professional Ethics', '13:30-15:00': 'Artificial Intelligence Applications', '15:00-16:30': 'Robotics' },
+                        { day: 'Saturday', '09:00-10:30': 'Cloud Security', '10:30-12:00': 'Business Intelligence', '13:30-15:00': 'Digital Marketing', '15:00-16:30': 'Enterprise Systems' },
+                    ],
+                };
+
+                timetableDataCSE[year].forEach(entry => {
+                    let row = `<tr><td>${entry.day}</td>`;
+                    row += `<td>${entry['09:00-10:30']}</td>`;
+                    row += `<td>${entry['10:30-12:00']}</td>`;
+                    row += `<td>${entry['13:30-15:00']}</td>`;
+                    row += `<td>${entry['15:00-16:30']}</td></tr>`;
+                    timetableBody.innerHTML += row;
+                });
+
+                // Display timetable section
+                document.getElementById('timetable').style.display = 'block';
+            }
+
+            // Function to populate subjects based on year
+            function populateSubjects(year) {
+                const subjectsTableBody = document.getElementById('subjectsTableBody');
+                subjectsTableBody.innerHTML = ''; // Clear existing rows
+
+                // Sample subjects data for Computer Science
+                const subjectsDataCSE = {
+		   '1': [
+                        { subject: 'Cybersecurity', professor: 'Dr. Williams', books: ['Cybersecurity Essentials', 'Ethical Hacking Guide'] },
+                        { subject: 'Cloud Computing', professor: 'Dr. Brown', books: ['Cloud Architecture Patterns', 'AWS Essentials'] }
+                    ],
+                   '2': [
+                        { subject: 'Database Management Systems', professor: 'Dr. Smith', books: ['DBMS by Korth', 'SQL Mastery'] },
+                        { subject: 'Software Engineering', professor: 'Dr. Johnson', books: ['Software Engineering by Pressman', 'Agile Development'] }
+                    ],
+                    '3': [
+                        { subject: 'Cybersecurity', professor: 'Dr. Williams', books: ['Cybersecurity Essentials', 'Ethical Hacking Guide'] },
+                        { subject: 'Cloud Computing', professor: 'Dr. Brown', books: ['Cloud Architecture Patterns', 'AWS Essentials'] }
+                    ],
+                    '4': [
+                        { subject: 'Artificial Intelligence', professor: 'Dr. Davis', books: ['AI by Russell', 'Deep Learning with Python'] },
+                        { subject: 'Internet of Things', professor: 'Dr. Martinez', books: ['IoT for Beginners', 'Raspberry Pi Projects'] }
+                    ]
+                };
+
+                subjectsDataCSE[year].forEach(entry => {
+                    let row = `<tr><td>${year}</td>`;
+                    row += `<td>${entry.subject}</td>`;
+                    row += `<td>${entry.professor}</td>`;
+                    row += `<td>${entry.books.join('<br>')}</td></tr>`;
+                    subjectsTableBody.innerHTML += row;
+                });
+
+                // Display subjects section
+                document.getElementById('subjects').style.display = 'block';
+            }
+
+            // Open sidebar function
+            document.getElementById('openSidebarBtn').addEventListener('click', openSidebar);
+
+            function openSidebar() {
+                document.getElementById('sidebar').style.left = '0';
+            }
+
+            // Close sidebar function
+            document.getElementById('closeSidebarBtn').addEventListener('click', closeSidebar);
+
+            function closeSidebar() {
+                document.getElementById('sidebar').style.left = '-250px';
+            }
+        });
+    </script>
+</body>
+</html>
